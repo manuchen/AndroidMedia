@@ -76,9 +76,11 @@ public class WavFileReader {
         byte[] shortValue = new byte[2];
 
         try {
+            //参考http://ticktick.blog.51cto.com/823160/1752947格式,一个一个byte读出来
+
             header.mChunkID = "" + (char) mDataInputStream.readByte() + (char) mDataInputStream.readByte() + (char) mDataInputStream.readByte() + (char) mDataInputStream.readByte();
             Log.d(TAG, "Read file chunkID:" + header.mChunkID);
-
+            //read(byte[] b) :  从输入流中读取一定数量的字节，并将其存储在缓冲区数组 b 中。以整数形式返回实际读取的字节数。在输入数据可用、检测到文件末尾或者抛出异常前，此方法一直阻塞。
             mDataInputStream.read(intValue);
             header.mChunkSize = byteArrayToInt(intValue);
             Log.d(TAG, "Read file chunkSize:" + header.mChunkSize);
@@ -139,6 +141,12 @@ public class WavFileReader {
         return ByteBuffer.wrap(b).order(ByteOrder.LITTLE_ENDIAN).getShort();
     }
 
+    /**
+     * 把byte数组转成int
+     * http://blog.csdn.net/zmx729618/article/details/51775635
+     * @param b
+     * @return
+     */
     private static int byteArrayToInt(byte[] b) {
         return ByteBuffer.wrap(b).order(ByteOrder.LITTLE_ENDIAN).getInt();
     }

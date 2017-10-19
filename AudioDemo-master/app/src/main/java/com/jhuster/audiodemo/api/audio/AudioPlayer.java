@@ -81,7 +81,8 @@ public class AudioPlayer {
             Log.e(TAG, "Player not started !");
             return false;
         }
-
+        //为什么要加没有能把所有的采样写到设备上?
+        //检查?
         if (mAudioTrack.write(audioData, offsetInBytes, sizeInBytes) != sizeInBytes) {
             Log.e(TAG, "Could not write all the samples to the audio device !");
         }

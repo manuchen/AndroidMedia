@@ -21,11 +21,11 @@ public class WavFileHeader {
     public static final int WAV_CHUNKSIZE_OFFSET = 4;
     public static final int WAV_SUB_CHUNKSIZE1_OFFSET = 16;
     public static final int WAV_SUB_CHUNKSIZE2_OFFSET = 40;
-
+    //头固定格式属于最“顶层”的信息块
     public String mChunkID = "RIFF";
     public int mChunkSize = 0;
     public String mFormat = "WAVE";
-
+    //fmt
     public String mSubChunk1ID = "fmt ";
     public int mSubChunk1Size = 16;
     public short mAudioFormat = 1;
@@ -34,7 +34,7 @@ public class WavFileHeader {
     public int mByteRate = 0;
     public short mBlockAlign = 0;
     public short mBitsPerSample = 8;
-
+    //data
     public String mSubChunk2ID = "data";
     public int mSubChunk2Size = 0;
 

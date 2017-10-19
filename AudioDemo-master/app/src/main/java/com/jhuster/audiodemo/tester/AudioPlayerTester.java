@@ -46,6 +46,7 @@ public class AudioPlayerTester extends Tester {
         @Override
         public void run() {
             byte[] buffer = new byte[SAMPLES_PER_FRAME * 2];
+            //不停的读
             while (!mIsTestingExit && mWavFileReader.readData(buffer, 0, buffer.length) > 0) {
                 mAudioPlayer.play(buffer, 0, buffer.length);
             }

@@ -40,6 +40,7 @@ public class WavFileWriter {
     public boolean closeFile() throws IOException {
         boolean ret = true;
         if (mDataOutputStream != null) {
+            //写上最后的文件大小
             ret = writeDataSize();
             mDataOutputStream.close();
             mDataOutputStream = null;
