@@ -17,6 +17,9 @@ import android.widget.Toast;
 
 import java.io.IOException;
 
+/**
+ * 使用Camera在6.0的系统上预览不了
+ */
 public class MainActivity extends AppCompatActivity implements SurfaceHolder.Callback, Camera.PreviewCallback {
 
     private SurfaceView surfaceView;
@@ -88,7 +91,7 @@ public class MainActivity extends AppCompatActivity implements SurfaceHolder.Cal
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this,Camera2Activity.class);
+                Intent intent = new Intent(MainActivity.this,Camera2SurfaceViewActivity.class);
                 startActivity(intent);
             }
         });
