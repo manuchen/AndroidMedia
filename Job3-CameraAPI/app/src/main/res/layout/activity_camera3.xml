@@ -12,6 +12,6 @@
 
     <TextureView
         android:id="@+id/textureview"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"/>
+        android:layout_width="100dp"
+        android:layout_height="100dp"/>
 </RelativeLayout>

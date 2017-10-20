@@ -23,6 +23,7 @@ import android.support.annotation.Nullable;
 import android.support.annotation.RequiresApi;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.util.Size;
 import android.view.Surface;
 import android.view.TextureView;
@@ -137,8 +138,10 @@ public class Camera3TextureViewActivity extends AppCompatActivity implements Tex
         SurfaceTexture texture = mPreviewView.getSurfaceTexture();
 
 //      这里设置的就是预览大小
-        texture.setDefaultBufferSize(mPreviewSize.getWidth(), mPreviewSize.getHeight());
-                Surface surface = new Surface(texture);
+//        texture.setDefaultBufferSize(mPreviewSize.getWidth(), mPreviewSize.getHeight());
+        //TODO 调小一些试试
+        texture.setDefaultBufferSize(mPreviewView.getWidth(), mPreviewView.getHeight());
+        Surface surface = new Surface(texture);
         try {
             // 设置捕获请求为预览，这里还有拍照啊，录像等
             mPreviewBuilder = camera.createCaptureRequest(CameraDevice.TEMPLATE_PREVIEW);
@@ -148,11 +151,9 @@ public class Camera3TextureViewActivity extends AppCompatActivity implements Tex
 
 //      就是在这里，通过这个set(key,value)方法，设置曝光啊，自动聚焦等参数！！ 如下举例：
 //      mPreviewBuilder.set(CaptureRequest.CONTROL_AE_MODE,CaptureRequest.CONTROL_AE_MODE_ON_AUTO_FLASH);
-
-
-
-        mImageReader = ImageReader.newInstance(mPreviewView.getWidth()/2, mPreviewView.getHeight()/2, ImageFormat.JPEG/*此处还有很多格式，比如我所用到YUV等*/, 2/*最大的图片数，mImageReader里能获取到图片数，但是实际中是2+1张图片，就是多一张*/);
-
+        mImageReader = ImageReader.newInstance(mPreviewView.getWidth(),
+                mPreviewView.getHeight(), ImageFormat.JPEG/*此处还有很多格式，比如我所用到YUV等*/,
+                2/*最大的图片数，mImageReader里能获取到图片数，但是实际中是2+1张图片，就是多一张*/);
         mImageReader.setOnImageAvailableListener(mOnImageAvailableListener, mHandler);
         // 这里一定分别add两个surface，一个Textureview的，一个ImageReader的，如果没add，会造成没摄像头预览，或者没有ImageReader的那个回调！！
         mPreviewBuilder.addTarget(surface);
@@ -194,12 +195,21 @@ public class Camera3TextureViewActivity extends AppCompatActivity implements Tex
         public void onImageAvailable(ImageReader reader) {
             Image img = reader.acquireNextImage();
             /**
-             *  因为Camera2并没有Camera1的Priview回调！！！所以该怎么能到预览图像的byte[]呢？就是在这里了！！！我找了好久的办法！！！
+             *  因为Camera2并没有Camera1的Priview回调！！！所以该怎么能到预览图像的byte[]呢？
+             *  就是在这里了！！！我找了好久的办法！！！
              **/
             ByteBuffer buffer = img.getPlanes()[0].getBuffer();
             byte[] data = new byte[buffer.remaining()];
             buffer.get(data);
             img.close();
+            Log.d("AAA","onImageAvailable");
         }
     };
+    protected void onPause() {
+        if (null != mImageReader) {
+            mImageReader.close();
+            mImageReader = null;
+        }
+        super.onPause();
+    }
 }
