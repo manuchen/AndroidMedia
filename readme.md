@@ -4,13 +4,16 @@ http://ticktick.blog.51cto.com/823160/1956269
 《Android 音视频从入门到提高 —— 任务列表》
 
 #### 1. 在 Android 平台绘制一张图片，使用至少 3 种不同的 API，ImageView，SurfaceView，自定义 View
- 	没有对应工程,请自行完成
+    没有对应工程,请自行完成
 #### 2. 在 Android 平台使用 AudioRecord 和 AudioTrack API 完成音频 PCM 数据的采集和播放，并实现读写音频 wav 文件
-	本项目中的job2开头的项目,参考链接（出处）：https://github.com/Jhuster/AudioDemo
+	本项目中的job2-AudioDemo-master,参考链接（出处）：https://github.com/Jhuster/AudioDemo
 
 #### 3. 在 Android 平台使用 Camera API 进行视频的采集，分别使用 SurfaceView、TextureView 来预览 Camera 数据，取到 NV21 的数据回调
+	本项目中的Job3-CameraAPI,参考链接（出处）：
+	SurfaceView ---- http://www.jianshu.com/p/7f766eb2f4e7
+	TextureView ---- http://blog.csdn.net/davidwillo/article/details/63688319
 
-    4. 学习 Android 平台的 MediaExtractor 和 MediaMuxer API，知道如何解析和封装 mp4 文件
+#### 4. 学习 Android 平台的 MediaExtractor 和 MediaMuxer API，知道如何解析和封装 mp4 文件
 
     5. 学习 Android 平台 OpenGL ES API，了解 OpenGL 开发的基本流程，使用 OpenGL 绘制一个三角形
 

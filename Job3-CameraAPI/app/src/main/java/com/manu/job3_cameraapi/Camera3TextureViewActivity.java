@@ -32,6 +32,7 @@ import java.util.Arrays;
 
 /**
  * Created by intel on 2017/10/19.
+ * 参考http://blog.csdn.net/davidwillo/article/details/63688319
  */
 
 @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
@@ -150,13 +151,14 @@ public class Camera3TextureViewActivity extends AppCompatActivity implements Tex
 
 
 
-        mImageReader = ImageReader.newInstance(mPreviewView.getWidth(), mPreviewView.getHeight(), ImageFormat.JPEG/*此处还有很多格式，比如我所用到YUV等*/, 2/*最大的图片数，mImageReader里能获取到图片数，但是实际中是2+1张图片，就是多一张*/);
+        mImageReader = ImageReader.newInstance(mPreviewView.getWidth()/2, mPreviewView.getHeight()/2, ImageFormat.JPEG/*此处还有很多格式，比如我所用到YUV等*/, 2/*最大的图片数，mImageReader里能获取到图片数，但是实际中是2+1张图片，就是多一张*/);
 
         mImageReader.setOnImageAvailableListener(mOnImageAvailableListener, mHandler);
         // 这里一定分别add两个surface，一个Textureview的，一个ImageReader的，如果没add，会造成没摄像头预览，或者没有ImageReader的那个回调！！
         mPreviewBuilder.addTarget(surface);
         mPreviewBuilder.addTarget(mImageReader.getSurface());
         camera.createCaptureSession(Arrays.asList(surface, mImageReader.getSurface()),mSessionStateCallback, mHandler);
+
     }
 
 

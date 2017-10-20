@@ -79,7 +79,6 @@ public class Camera2SurfaceViewActivity extends AppCompatActivity implements  Vi
     private void initView() {
         iv_show = (ImageView) findViewById(R.id.iv_show_camera2_activity);
         mSurfaceView = (SurfaceView) findViewById(R.id.surface_view);
-//        mPreviewView.setSurfaceTextureListener(this);
         mSurfaceView.setOnClickListener(this);
         mSurfaceHolder = mSurfaceView.getHolder();
         mSurfaceHolder.setKeepScreenOn(true);
@@ -112,11 +111,13 @@ public class Camera2SurfaceViewActivity extends AppCompatActivity implements  Vi
     private void initCamera2() {
         HandlerThread handlerThread = new HandlerThread("Camera2");
         handlerThread.start();
-        childHandler = new Handler(handlerThread.getLooper());
-        mainHandler = new Handler(getMainLooper());
+
+
+
         mCameraID = "" + CameraCharacteristics.LENS_FACING_FRONT;//后摄像头
         mImageReader = ImageReader.newInstance(1080, 1920, ImageFormat.JPEG,1);
-        mImageReader.setOnImageAvailableListener(new ImageReader.OnImageAvailableListener() { //可以在这里处理拍照得到的临时照片 例如，写入本地
+        mImageReader.setOnImageAvailableListener(new ImageReader.OnImageAvailableListener() {
+            //可以在这里处理拍照得到的临时照片 例如，写入本地
             @Override
             public void onImageAvailable(ImageReader reader) {
                 mCameraDevice.close();
