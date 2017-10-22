@@ -15,8 +15,10 @@
 	TextureView ---- http://blog.csdn.net/davidwillo/article/details/63688319
 
 #### 4. 学习 Android 平台的 MediaExtractor 和 MediaMuxer API，知道如何解析和封装 mp4 文件
+	本项目中的Job4MP4,参考链接（出处）：
+	http://blog.csdn.net/zhi184816/article/details/52514138
 
-    5. 学习 Android 平台 OpenGL ES API，了解 OpenGL 开发的基本流程，使用 OpenGL 绘制一个三角形
+#### 5. 学习 Android 平台 OpenGL ES API，了解 OpenGL 开发的基本流程，使用 OpenGL 绘制一个三角形
 
     6. 学习 Android 平台 OpenGL ES API，学习纹理绘制，能够使用 OpenGL 显示一张图片
 
