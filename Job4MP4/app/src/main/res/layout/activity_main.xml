@@ -24,6 +24,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="分离可播放的音频"/>
+        <Button
+            android:id="@+id/combine_bt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="分离后的音频、视频合成一个"/>
 
 
     </LinearLayout>
