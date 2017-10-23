@@ -1,6 +1,9 @@
 ## 工程出处
 * Android 音视频开发入门指南 http://ticktick.blog.51cto.com/823160/1956269
 * Android 音视频开发学习思路 http://www.cnblogs.com/renhui/p/7452572.html
+
+		其他参考资料
+		http://blog.csdn.net/King1425/article/category/6917192/2
 ## 任务列表
 《Android 音视频从入门到提高 —— 任务列表》
 
