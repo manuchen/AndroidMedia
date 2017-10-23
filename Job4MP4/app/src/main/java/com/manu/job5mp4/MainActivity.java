@@ -25,6 +25,8 @@ import java.nio.ByteBuffer;
 
 /**
  * http://blog.csdn.net/zhi184816/article/details/52514138
+ * 音视频录制步骤
+ * http://blog.csdn.net/zhi184816/article/details/52471911
  */
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
