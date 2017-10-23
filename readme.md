@@ -37,6 +37,7 @@
     13. 深入研究音视频相关的网络协议，如 rtmp，hls，以及封包格式，如：flv，mp4
 
     14. 深入学习一些音视频领域的开源项目，如 webrtc，ffmpeg，ijkplayer，librtmp 等等
+    最上面的链接上有ijkplayer的介绍
 
     15. 将 ffmpeg 库移植到 Android 平台，结合上面积累的经验，编写一款简易的音视频播放器
 
