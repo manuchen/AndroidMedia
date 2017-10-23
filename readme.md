@@ -5,7 +5,7 @@
 《Android 音视频从入门到提高 —— 任务列表》
 
 #### 1. 在 Android 平台绘制一张图片，使用至少 3 种不同的 API，ImageView，SurfaceView，自定义 View
-    没有对应工程,请自行完成
+    本项目中的job1Pic
 #### 2. 在 Android 平台使用 AudioRecord 和 AudioTrack API 完成音频 PCM 数据的采集和播放，并实现读写音频 wav 文件
 	本项目中的job2-AudioDemo-master,参考链接（出处）：https://github.com/Jhuster/AudioDemo
 
