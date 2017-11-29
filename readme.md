@@ -2,8 +2,10 @@
 * Android 音视频开发入门指南 http://ticktick.blog.51cto.com/823160/1956269
 * Android 音视频开发学习思路 http://www.cnblogs.com/renhui/p/7452572.html
 
-		其他参考资料
-		http://blog.csdn.net/King1425/article/category/6917192/2
+### 其他参考资料
+* http://blog.csdn.net/King1425/article/category/6917192/2
+* http://blog.csdn.net/yangwen123/article/category/2589087
+* 
 ## 任务列表
 《Android 音视频从入门到提高 —— 任务列表》
 
@@ -22,6 +24,7 @@
 	http://blog.csdn.net/zhi184816/article/details/52514138
 
 #### 5. 学习 Android 平台 OpenGL ES API，了解 OpenGL 开发的基本流程，使用 OpenGL 绘制一个三角形
+	本项目中的Job5,参考链接(出处LearnOpenGL CN):https://learnopengl-cn.github.io/01%20Getting%20started/04%20Hello%20Triangle/
 
     6. 学习 Android 平台 OpenGL ES API，学习纹理绘制，能够使用 OpenGL 显示一张图片
 

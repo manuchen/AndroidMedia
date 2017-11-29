@@ -1,0 +1,4 @@
+﻿  glad.c
+  test.cpp
+LINK : warning LNK4098: 默认库“MSVCRT”与其他库的使用冲突；请使用 /NODEFAULTLIB:library
+  Project4.vcxproj -> C:\Users\intel\source\repos\Project4\Debug\Project4.exe
