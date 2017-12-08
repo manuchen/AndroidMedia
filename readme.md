@@ -26,9 +26,10 @@
 #### 5. 学习 Android 平台 OpenGL ES API，了解 OpenGL 开发的基本流程，使用 OpenGL 绘制一个三角形
 	本项目中的Job5,参考链接(出处LearnOpenGL CN):https://learnopengl-cn.github.io/01%20Getting%20started/04%20Hello%20Triangle/
 
-    6. 学习 Android 平台 OpenGL ES API，学习纹理绘制，能够使用 OpenGL 显示一张图片
+#### 6. 学习 Android 平台 OpenGL ES API，学习纹理绘制，能够使用 OpenGL 显示一张图片
+	本项目中的Job5,参考链接:https://learnopengl-cn.github.io/01%20Getting%20started/06%20Textures/#_8
 
-    7. 学习 MediaCodec API，完成音频 AAC 硬编、硬解
+#### 7. 学习 MediaCodec API，完成音频 AAC 硬编、硬解
 
     8. 学习 MediaCodec API，完成视频 H.264 的硬编、硬解
 
